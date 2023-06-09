@@ -1,0 +1,17 @@
+.card {
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+
+  .container {
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .footer {
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: gray;
+  }
+}
