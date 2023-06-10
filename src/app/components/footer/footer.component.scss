@@ -1,0 +1,19 @@
+* {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: #fff;
+  }
+
+  #rodape {
+    position: fixed;
+    display: inline-flex;
+    background-color: #1e1818;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  #rodape > p {
+    margin: 10px;
+    padding-right: 30px;
+  }
