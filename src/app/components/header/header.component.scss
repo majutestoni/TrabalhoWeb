@@ -1,50 +1,81 @@
 * {
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    color: #fff;
-  }
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #fff;
+}
 
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff;
-    border-bottom: 3px solid #968c96;
-    padding: 10px 20px;
-  }
-  
-  #logo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-bottom: 3px solid #968c96;
+  padding: 10px 20px;
+  z-index: 50;
+}
+
+menu {
+  display: flex;
+
+  a {
+    background-color: #968c96;
+    padding: 20px;
+    border: 0px;
+    text-align: center;
+    transition: 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 2%;
+
+    p {
+      margin: 0px;
+      padding: 20px;
+      display: inline;
+      justify-content: space-between;
+      align-items: center;
+      font-size: larger;
+      list-style: none;
+      color: black;
+    }
   }
 
-  #logo img {
-    margin-right: 20px;
+  a:hover {
+    background-color: #424242;
   }
-  
-  #foto {
-    display: flex;
-    align-items: center;
-  }
-  
-  h1 {
-    color: #393639;
-    font-size: x-large
-  }
-  
-  #cabecalho nav {
-    text-align: right;
-  }
-  
-  #cabecalho a {
-    display: inline-flex;
-    align-items: center;
-    color: #fff;
-    font-weight: 500;
-    text-decoration: none;
-    margin-right: 30px;
-  }
+}
+
+#logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo img {
+  margin-right: 20px;
+}
+
+#foto {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  color: #393639;
+  font-size: x-large;
+}
+
+#cabecalho nav {
+  text-align: right;
+}
+
+#cabecalho a {
+  display: inline-flex;
+  align-items: center;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  margin-right: 30px;
+}
