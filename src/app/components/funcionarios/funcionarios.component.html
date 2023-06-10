@@ -1,2 +1,13 @@
-<p>funcionarios works!</p>
-<app-card></app-card>
+<body>
+  <div class="row container">
+    <div *ngFor="let item of funcionarios" class="col-lg-4 col-md-6 col-sm-12 cards">
+      <app-card
+        [nome]="item.nome"
+        [linkFoto]="item.foto"
+        [email]="item.email"
+        [propriedade1]="item.subobjeto.propriedade1"
+        [propriedade2]="item.subobjeto.propriedade2"
+      ></app-card>
+    </div>
+  </div>
+</body>

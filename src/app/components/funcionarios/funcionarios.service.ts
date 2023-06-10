@@ -8,18 +8,18 @@ import { HttpClient } from '@angular/common/http';
 export class FuncionariosService {
   constructor(private http: HttpClient) {}
 
-  getFuncionarios(): Observable<Funcionario> {
-    return this.http.get<Funcionario>('assets/funcionarios.json')
+  getFuncionarios(): Observable<Funcionario[]> {
+    return this.http.get<Funcionario[]>('assets/funcionarios.json')
   }
 }
 
 export interface Funcionario {
   id: number;
-  nome: String;
-  foto: String;
-  email: String;
+  nome: string;
+  foto: string;
+  email: string;
   subobjeto: {
-    propriedade1: String;
-    propriedade2: String;
+    propriedade1: string;
+    propriedade2: string;
   };
 }
