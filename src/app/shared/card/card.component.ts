@@ -12,8 +12,7 @@ export class CardComponent {
   @Input() propriedade2 = '';
   @Input() email = '';
 
-  redirectToOutlook(): void {
-    const email = 'seuemail@dominio.com';
-    window.location.href = `https://outlook.live.com/owa/?path=/mail/action/compose&to=${email}`;
+  abrirOutlook(): void {
+    window.open('https://outlook.com', '_blank');
   }
 }
