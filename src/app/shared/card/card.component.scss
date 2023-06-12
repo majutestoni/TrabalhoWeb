@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   background-color: #000;
+  color: rgb(196, 196, 196);
 
   .container {
     padding: 10px;
@@ -11,7 +12,19 @@
   }
   .footer {
     padding: 10px;
+    width: 100%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: gray;
+    background-color: rgb(196, 196, 196);
+    transition: 0.2s;
+    font-size: 10pt;
+
+  }
+
+  .footer:hover{
+    background-color: #424242;
+  }
+
+  button{
+    border: none;
   }
 }
