@@ -16,4 +16,8 @@ export class HeaderComponent {
   navegarFuncionarios(): void {
     this.router.navigateByUrl('/funcionarios');
   }
+
+  navegarCadastro2(): void {
+    this.router.navigateByUrl('/cadastro2');
+  }
 }

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { Cadastro2Component } from './components/cadastro2/cadastro2.component';
 
 const routes: Routes = [
   {
@@ -15,12 +16,18 @@ const routes: Routes = [
   {
     path: 'funcionarios',
     loadChildren: () =>
-      import('./components/funcionarios/funcionarios.module').then((m) => m.FuncionariosModule),
-  }
+      import('./components/funcionarios/funcionarios.module').then(
+        (m) => m.FuncionariosModule
+      ),
+  },
+  {
+    path: 'cadastro2',
+    component: Cadastro2Component,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
