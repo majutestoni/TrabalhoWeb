@@ -35,3 +35,27 @@ export interface Deletar {
   status: string;
   mensagem: string;
 }
+
+const btnConsultar = document.getElementById("btn-consultar");
+    btnConsultar.addEventListener("click", function() {
+      const idFuncionario = "123";
+      buscarFuncionario(idFuncionario);
+    });
+
+function buscarFuncionario(id) {
+  const resultado = document.getElementById("result");
+
+  CadastroService.consulta(id).subscribe(
+    (funcionario) => {
+
+      resultado.querySelector("#id").innerText = funcionario.id;
+      resultado.querySelector("#nome").innerText = funcionario.nome;
+      resultado.querySelector("#departamento").innerText = funcionario.departamento;
+      resultado.querySelector("#endereco").innerText = funcionario.endereco;
+      resultado.querySelector("#email").innerText = funcionario.email;
+    },
+    (error) => {
+      console.error("Erro ao buscar funcionário:", error);
+    }
+  );
+}
