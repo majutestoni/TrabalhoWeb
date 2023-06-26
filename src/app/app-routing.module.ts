@@ -22,7 +22,10 @@ const routes: Routes = [
   },
   {
     path: 'cadastro2',
-    component: Cadastro2Component,
+    loadChildren: () =>
+      import('./components/cadastro2/cadastro2.module').then(
+        (m) => m.Cadastro2Module
+      ),
   },
 ];
 

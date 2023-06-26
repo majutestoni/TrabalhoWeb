@@ -1,32 +1,21 @@
 <body>
-    <div class="container">
-        <form>
-            <label for="id">ID:</label>
-            <input type="text" id="id" name="id" required>
-            <button class="btn-consultar" type="submit">Consultar</button>
-        </form>
-        <div id="result">
-            <h1>Detalhes do Funcionário</h1>
-            <div class="field">
-              <label for="id">ID:</label>
-              <span id="id"></span>
-            </div>
-            <div class="field">
-              <label for="nome">Nome:</label>
-              <span id="nome"></span>
-            </div>
-            <div class="field">
-              <label for="departamento">Departamento:</label>
-              <span id="departamento"></span>
-            </div>
-            <div class="field">
-              <label for="endereco">Endereço:</label>
-              <span id="endereco"></span>
-            </div>
-            <div class="field">
-              <label for="email">E-mail:</label>
-              <span id="email"></span>
-            </div>
+  <div class="container">
+    <form (ngSubmit)="consultar()" [formGroup]="fg">
+      <label for="id">ID:</label>
+      <input formControlName="id" />
+      <button class="btn-consultar" type="submit">Consultar</button>
+    </form>
+    <div id="result">
+      <form [formGroup]="formValues">
+        <h1>Detalhes do funcionario(a)</h1>
+        <div>
+          <label for="id">ID:</label> <input formControlName="id"/>
+          <label for="nome">ID:</label> <input formControlName="nome"/>
+          <label for="departamento">ID:</label> <input formControlName="departamento"/>
+          <label for="endereco">ID:</label> <input formControlName="endereco"/>
+          <label for="email">ID:</label> <input formControlName="email"/>
         </div>
+      </form>
     </div>
+  </div>
 </body>
