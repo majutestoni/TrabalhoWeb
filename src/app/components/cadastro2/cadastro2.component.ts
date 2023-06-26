@@ -16,7 +16,7 @@ export class Cadastro2Component implements OnInit {
     private cadastroService: CadastroService
   ) {
     this.fg = this.fb.group({
-      id: ['', Validators.required]
+      id: ['', Validators.required],
     });
 
     this.formValues = this.fb.group({
@@ -41,13 +41,22 @@ export class Cadastro2Component implements OnInit {
             departamento: e.departamento,
             endereco: e.endereco,
             email: e.email,
-          })
-
+          });
         },
         (err) => {
           console.error(err);
         }
       );
     }
+  }
+
+  public delete() {
+    this.cadastroService.deletar().subscribe((c) => {
+      if (c.status == 'Ok') {
+        //componente cor verde
+      } else {
+        //componente cor vermelha
+      }
+    });
   }
 }
