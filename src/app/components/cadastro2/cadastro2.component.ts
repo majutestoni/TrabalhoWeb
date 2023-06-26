@@ -10,6 +10,8 @@ import { CadastroService } from './cadastro.service';
 export class Cadastro2Component implements OnInit {
   public fg: FormGroup;
   public formValues: FormGroup;
+  public mesageDelete = 'Aqui conterá mensagem ao deletar'
+  public color = 'primary'
 
   constructor(
     private fb: FormBuilder,
@@ -53,10 +55,12 @@ export class Cadastro2Component implements OnInit {
   public delete() {
     this.cadastroService.deletar().subscribe((c) => {
       if (c.status == 'Ok') {
-        //componente cor verde
+        this.color = 'success'
       } else {
-        //componente cor vermelha
+        this.color = 'danger'
       }
+
+      this.mesageDelete = c.mensagem
     });
   }
 }

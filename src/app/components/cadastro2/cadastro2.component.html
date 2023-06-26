@@ -9,17 +9,19 @@
       <form [formGroup]="formValues">
         <h1>Detalhes do funcionario(a)</h1>
         <div class="container">
-          <label for="id">ID:</label> <input formControlName="id"/>
-          <label for="nome">ID:</label> <input formControlName="nome"/>
-          <label for="departamento">ID:</label> <input formControlName="departamento"/>
-          <label for="endereco">ID:</label> <input formControlName="endereco"/>
-          <label for="email">ID:</label> <input formControlName="email"/>
+          <label for="id">ID:</label> <input formControlName="id" />
+          <label for="nome">ID:</label> <input formControlName="nome" />
+          <label for="departamento">ID:</label>
+          <input formControlName="departamento" />
+          <label for="endereco">ID:</label>
+          <input formControlName="endereco" /> <label for="email">ID:</label>
+          <input formControlName="email" />
         </div>
       </form>
 
       <button (click)="delete()">Deletar</button>
-      <div class="alert alert-primary" role="alert">
-        A simple primary alert—check it out!
+      <div class="alert alert-{{color}}" role="alert">
+        {{ mesageDelete }}
       </div>
     </div>
   </div>
