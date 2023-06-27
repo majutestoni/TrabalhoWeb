@@ -23,6 +23,22 @@
       <div class="alert alert-{{color}}" role="alert">
         {{ mesageDelete }}
       </div>
+
+      <form [formGroup]="formInsert">
+        <h1>Inserir funcionario</h1>
+        <div class="container">
+          <label for="nome">ID:</label> <input formControlName="nome" />
+          <label for="departamento">ID:</label>
+          <input formControlName="departamento" />
+          <label for="endereco">ID:</label>
+          <input formControlName="endereco" /> <label for="email">ID:</label>
+          <input formControlName="email" />
+        </div>
+        <button (click)="inserir()">Inseirir</button>
+        <div class="alert alert-{{colorInserir}}" role="alert">
+          {{ mesageInserir }}
+        </div>
+      </form>
     </div>
   </div>
 </body>

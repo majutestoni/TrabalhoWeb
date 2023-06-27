@@ -18,8 +18,12 @@ export class CadastroService {
     return this.http.delete<Deletar>(`${URL_API}`);
   }
 
-  public update(): Observable<Deletar> {
-    return this.http.put<Deletar>(`${URL_API}`, {});
+  public update(body: any): Observable<Deletar> {
+    return this.http.put<Deletar>(`${URL_API}`, body);
+  }
+
+  public inserir(body: any): Observable<Deletar> {
+    return this.http.put<Deletar>(`${URL_API}`, body)
   }
 }
 

@@ -10,8 +10,11 @@ import { CadastroService } from './cadastro.service';
 export class Cadastro2Component implements OnInit {
   public fg: FormGroup;
   public formValues: FormGroup;
-  public mesageDelete = 'Aqui conterá mensagem ao deletar'
-  public color = 'primary'
+  public formInsert: FormGroup;
+  public mesageDelete = 'Aqui conterá mensagem ao deletar';
+  public color = 'primary';
+  public mesageInserir = 'Aqui conterá mensagem ao inserir';
+  public colorInserir = 'primary';
 
   constructor(
     private fb: FormBuilder,
@@ -27,6 +30,13 @@ export class Cadastro2Component implements OnInit {
       departamento: [''],
       endereco: [''],
       email: [''],
+    });
+
+    this.formInsert = this.fb.group({
+      nome: ['', Validators.required],
+      departamento: ['', Validators.required],
+      endereco: ['', Validators.required],
+      email: ['', Validators.required],
     });
   }
 
@@ -55,12 +65,26 @@ export class Cadastro2Component implements OnInit {
   public delete() {
     this.cadastroService.deletar().subscribe((c) => {
       if (c.status == 'Ok') {
-        this.color = 'success'
+        this.color = 'success';
       } else {
-        this.color = 'danger'
+        this.color = 'danger';
       }
 
-      this.mesageDelete = c.mensagem
+      this.mesageDelete = c.mensagem;
     });
+  }
+
+  public inserir() {
+    if (this.formInsert.valid) {
+      this.cadastroService.inserir(this.formInsert.value).subscribe((c) => {
+        if (c.status == 'Ok') {
+          this.colorInserir = 'success';
+        } else {
+          this.colorInserir = 'danger';
+        }
+  
+        this.mesageInserir = c.mensagem;
+      });
+    }
   }
 }
