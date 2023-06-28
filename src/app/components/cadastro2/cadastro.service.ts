@@ -23,7 +23,7 @@ export class CadastroService {
   }
 
   public inserir(body: any): Observable<Deletar> {
-    return this.http.put<Deletar>(`${URL_API}`, body)
+    return this.http.put<Deletar>(`${URL_API}`, body);
   }
 }
 

@@ -1,24 +1,37 @@
-body{
-    padding: 5%;
-    margin-left: 10%;
-    margin-right: 10%;
-    z-index: 1;
-    margin-top: 90px;
-  }
+body {
+  padding: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  z-index: 1;
+  margin-top: 90px;
+}
 
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  form {
-    margin-bottom: 50px;
-    display: flex;
-    align-items: center;
-  }
+button {
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  margin: 10px;
+  width: 30%;
+}
 
-  .field {
+button:hover {
+  background-color: white;
+  border-color: black;
+  color: black;
+}
 
-  }
+form {
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.field {
+}

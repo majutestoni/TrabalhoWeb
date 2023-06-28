@@ -7,38 +7,39 @@
     </form>
     <div id="result">
       <form [formGroup]="formValues">
-        <h1>Detalhes do funcionario(a)</h1>
         <div class="container">
+          <h1>Detalhes do funcionario(a)</h1>
           <label for="id">ID:</label> <input formControlName="id" />
-          <label for="nome">ID:</label> <input formControlName="nome" />
-          <label for="departamento">ID:</label>
+          <label for="nome">Nome:</label> <input formControlName="nome" />
+          <label for="departamento">Departamento:</label>
           <input formControlName="departamento" />
-          <label for="endereco">ID:</label>
-          <input formControlName="endereco" /> <label for="email">ID:</label>
+          <label for="endereco">Endereço:</label>
+          <input formControlName="endereco" /> <label for="email">Email:</label>
           <input formControlName="email" />
+          <button (click)="delete()">Deletar</button>
         </div>
       </form>
 
-      <button (click)="delete()">Deletar</button>
-      <div class="alert alert-{{color}}" role="alert">
+      <div class="alert alert-{{ color }}" role="alert">
         {{ mesageDelete }}
       </div>
 
       <form [formGroup]="formInsert">
-        <h1>Inserir funcionario</h1>
         <div class="container">
-          <label for="nome">ID:</label> <input formControlName="nome" />
-          <label for="departamento">ID:</label>
+          <h1>Inserir funcionario</h1>
+          <label for="nome">Nome:</label> <input formControlName="nome" />
+          <label for="departamento">Departamento:</label>
           <input formControlName="departamento" />
-          <label for="endereco">ID:</label>
-          <input formControlName="endereco" /> <label for="email">ID:</label>
+          <label for="endereco">Endereço:</label>
+          <input formControlName="endereco" /> <label for="email">Email:</label>
           <input formControlName="email" />
-        </div>
-        <button (click)="inserir()">Inseirir</button>
-        <div class="alert alert-{{colorInserir}}" role="alert">
-          {{ mesageInserir }}
+          <button (click)="inserir()">Inseirir</button>
         </div>
       </form>
+
+      <div class="alert alert-{{ colorInserir }}" role="alert">
+        {{ mesageInserir }}
+      </div>
     </div>
   </div>
 </body>
