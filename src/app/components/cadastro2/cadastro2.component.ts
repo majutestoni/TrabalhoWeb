@@ -75,16 +75,14 @@ export class Cadastro2Component implements OnInit {
   }
 
   public inserir() {
-    if (this.formInsert.valid) {
-      this.cadastroService.inserir(this.formInsert.value).subscribe((c) => {
-        if (c.status == 'Ok') {
-          this.colorInserir = 'success';
-        } else {
-          this.colorInserir = 'danger';
-        }
-  
-        this.mesageInserir = c.mensagem;
-      });
-    }
+    this.cadastroService.inserir(this.formInsert.value).subscribe((c) => {
+      if (c.status == 'Ok') {
+        this.colorInserir = 'success';
+      } else {
+        this.colorInserir = 'danger';
+      }
+
+      this.mesageInserir = c.mensagem;
+    });
   }
 }
